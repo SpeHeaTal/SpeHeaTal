@@ -40,47 +40,36 @@ git clone https://github.com/SpeHeaTal/SpeHeaTal.git
 pip install -r requirements.txt
 ```
 
-
-## Super resolution
-When you need to use your own pictures for testing, please use Real-ESRGAN super-resolution technology to perform four times super-resolution on your own pictures.
-[Real-ESRGAN.](https://github.com/xinntao/Real-ESRGAN/tree/master)
-
-
-## Data and Pretrained Models
-
-```
-original_image   //Sperm original image folder.
-2 synchronized brightness sperm   //Super-resolution images, pre-processed images and mask files.
-Run   //Program running temporary folder.
-```
-
-Click the links below to download the checkpoint for the corresponding model type. And put all pretrained models in the root directory.
+## Pretrained Models
+Please click the links below to download the checkpoint for the desired model type, and place all pretrained models in the root directory.
 
 - `default` or `vit_h`:[ViT-H SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth)
 - `vit_l`:[ViT-L SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth)
 - `vit_b`:[ViT-B SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)
 
 ## Getting Started
-The code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. First you need to download the Segment Anything Model.
+This code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. It is recommended to download the Segment Anything Model using the following command:
 ```
 pip install git+https://github.com/facebookresearch/segment-anything.git
 ```
-In order to run SAM, you also need to install the following dependencies.
+In order to run SAM, please ensure you install the necessary dependencies:
 ```
 pip install opencv-python pycocotools matplotlib onnxruntime onnx
 ```
+
 ### Preprocessing and segmentation
 
-  
-First, place the prepared original sperm images in the original_image folder and name them in the format of 001.jpg, 002.jpg... Then run [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/tree/master) for four times super-resolution, and save the four-fold super-resolution images in the `2 synchronized brightness sperm` folder (the corresponding image remains named the same as in `original_image` folder).
+Initially, place the prepared original sperm images in the `original_image` folder, and name them in the format of 001.jpg, 002.jpg, etc. Subsequently, enhance the resolution using [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN/tree/master) for a fourfold increase in image quality, and save these enhanced images in the `2 synchronized brightness sperm` folder (retain the same naming convention as in the `original_image` folder).
 
-Then run the `preprocessing_step.py` for image preprocessing, preliminary segmentation and mask screening:
+For image preprocessing, preliminary segmentation, and mask screening, please run the `preprocessing_step.py` script:
+
 ```
 python preprocessing_step.py
 ```
-Subsequently, select the image you need to further segment and set the value of `j`  to the name of the image.
+After that, select the image you need to further segment and set the value of `j` to the name of the image.
 
-Then，running!
+Finally, run the segmentation code using the following command:
+
 ```
 python sperm_segmentation_main.py
 ```
