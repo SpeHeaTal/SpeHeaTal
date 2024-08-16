@@ -14,26 +14,17 @@ Here is an overview of the project's directory structure:
 SpeHeaTal/
     - mask_processing.py            # Preprocessing and initial segmentation file
     - sperm_segmentation_main.py         # main file of sperm segmentation
-    - segment-anything-main/       #SAM model folder
-    - sam_vit_h_4b8939.pth       #SAM model-vit-h
-    - sam_vit_l_0b3195.pth       #SAM model-vit-l
-    - sam_vit_b_01ec64.pth       #SAM model-vit-b
+    - sam_vit_h_4b8939.pth       # SAM model-vit-h
+    - sam_vit_l_0b3195.pth       # SAM model-vit-l
+    - sam_vit_b_01ec64.pth       # SAM model-vit-b
     - README.md             # This file
     - requirements.txt      # The required Python packages
 
-    - original_image/   //Sperm original image folder.
-    - 2 synchronized brightness sperm/   //Super-resolution images, pre-processed images and mask files.
-    - Run/   //Program running temporary folder.
+    - segment-anything-main/       # SAM model folder
+    - original_image/      # Sperm original image folder
+    - 2 synchronized brightness sperm/      # Super-resolution images, pre-processed images and mask files
+    - Run/       # Program running temporary folder
 ```
-python preprocessing_step.py
-```
-Subsequently, select the image you need to further segment and set the value of `j`  to the name of the image.
-
-Then，running!
-```
-python sperm_segmentation_main.py
-
-
 
 ## Pipeline
 
