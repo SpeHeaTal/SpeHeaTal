@@ -4,7 +4,7 @@
 
 ## Quick Tour:
 
-This is a pytorch implementation for our AAAI-2025 paper "SpeHeaTal: A Cluster-Enhanced Segmentation Method for Sperm Morphology Analysis". To run the code, please make sure you have prepared your data following the same structure as follows (you can also refer to the examplar data in this repository).
+This is a implementation for our AAAI-2025 paper "SpeHeaTal: A Cluster-Enhanced Segmentation Method for Sperm Morphology Analysis". To run the code, please make sure you have prepared your data following the same structure as follows (you can also refer to the examplar data in this repository).
 
 ## Project Structure
 
