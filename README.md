@@ -12,7 +12,7 @@ Here is an overview of the project's directory structure:
 
 ```
 SpeHeaTal/
-    - mask_processing.py            # Preprocessing and initial segmentation file
+    - preprocessing_step.py            # Preprocessing and initial segmentation file
     - sperm_segmentation_main.py         # main file of sperm segmentation
     - sam_vit_h_4b8939.pth       # SAM model-vit-h
     - sam_vit_l_0b3195.pth       # SAM model-vit-l
